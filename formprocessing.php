@@ -15,18 +15,8 @@
     // $_GET
     // $_POST
 
-    if ( isset($_POST['name']) ) {
-        echo 'PROCESSING YOUR INPUTS:<br>';
-
-        echo $_POST['name'].'<br>';
-        echo $_POST['email'].'<br>';
-        echo $_POST['phone'].'<br>';
-        echo '<pre>'. $_POST['msg'] .'</pre><br>';
-
-        // Save it to file, record it to DB, or send via email
-    } else {
+    if ( !isset($_POST['name']) ) {
         ?>
-
         <form action="?" method="post">
             <table border="0">
                 <tr>
@@ -53,6 +43,17 @@
         </form>
 
         <?php
+    } else {
+        // PROCESSING
+        echo 'PROCESSING YOUR INPUTS:<br>';
+
+        echo $_POST['name'].'<br>';
+        echo $_POST['email'].'<br>';
+        echo $_POST['phone'].'<br>';
+        echo '<pre>'. $_POST['msg'] .'</pre><br>';
+
+
+        // Save it to file, record it to DB, or send via email
     }
     ?>
 
