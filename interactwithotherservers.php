@@ -9,7 +9,8 @@
     <h1>My Fave Wikis</h1>
 
     <form action="?" method="get">
-        <select name="wiki">
+        <select name="wiki" required>
+            <option value="">(Select)</option>
             <option value="Artificial_intelligence">Artificial Intelligence</option>
             <option value="Machine_learning">Machine Learning</option>
             <option value="Artificial_life">Artificial Life</option>
