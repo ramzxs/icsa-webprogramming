@@ -23,10 +23,10 @@
     $OPEN = ($settings == '1');
     fclose($file);
 
-    
+
     // Option 3: Database-Driven
     $dbConn = new mysqli('localhost', 'root', '', 'launchpad_db', '3306');  // Port Number
-    echo 'Database Connection: ' . $dbConn->stat();                      // Object-Oriented Programming (OOP)
+    echo 'Database Connection: ' . $dbConn->stat();                         // Object-Oriented Programming (OOP)
     $result = $dbConn->query('SELECT * FROM settings');                     // Structured Query Language (SQL)
     $row = $result->fetch_assoc();                                          // Array
     // print_r($row);
